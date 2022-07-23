@@ -30,4 +30,29 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "E-Scooters"
+      scooters: "Scooters"
+      employees: "Employees"
+      reservations: "Reservations"
+  employees:
+    index:
+      title: "Employees"
+    new:
+      title: "New Employee"
+  shared:
+    new: "New"
+    search: "Search"
+    back: "Back"
+    submit: "Submit"
+  scooters:
+    index:
+      title: "Scooters"
+    new:
+      title: "New Scooter"
+  reservations:
+    index:
+      title: "Reservations"
+    new:
+      title: "New Reservation"

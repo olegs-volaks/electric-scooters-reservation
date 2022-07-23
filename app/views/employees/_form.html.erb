@@ -1,0 +1,8 @@
+<%= simple_form_for @employee, wrapper: :horizontal_form do |f| %>
+
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <hr>
+  <%= f.submit t('shared.submit'), class: 'btn btn-outline-success' %>
+<% end %>

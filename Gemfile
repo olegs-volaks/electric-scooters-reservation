@@ -76,3 +76,7 @@ end
 
 gem 'simple_form', '~> 5.1'
 gem 'ransack', '~> 3.2', '>= 3.2.1'
+gem 'rails-i18n', '~> 7.0', '>= 7.0.5'
+gem 'validates_overlap', '~> 1.0'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+gem 'will_paginate-bootstrap-style'

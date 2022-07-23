@@ -1,0 +1,22 @@
+<%= simple_form_for @reservation do |f| %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.association :employee, input_html: { data: { controller: "tom-select" } } %>
+    </div>
+    <div class="col-md-6">
+      <%= f.association :scooter, input_html: { data: { controller: "tom-select" } } %>
+    </div>
+
+    <div class="col-md-6">
+      <%= f.input :from, as: :string, input_html: { data: { controller: "flatpickr" } } %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :to, as: :string, input_html: { data: { controller: "flatpickr" } } %>
+    </div>
+  </div>
+
+
+  <hr>
+  <%= f.submit t('shared.submit'), class: 'btn btn-outline-success' %>
+<% end %>

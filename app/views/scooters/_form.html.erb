@@ -1,0 +1,6 @@
+<%= simple_form_for @scooter, wrapper: :horizontal_form do |f| %>
+
+  <%= f.input :number %>
+  <hr>
+  <%= f.submit t('shared.submit'), class: 'btn btn-outline-success' %>
+<% end %>

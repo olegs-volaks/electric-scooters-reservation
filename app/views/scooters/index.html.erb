@@ -1,0 +1,33 @@
+<%= page_header t('.title'), button_title: t('shared.new'), link: new_scooter_path %>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <%= search_form_for @q do |f| %>
+      <div class="row">
+        <div class="col-sm-9">
+          <%= f.search_field :number_cont, class: 'form-control', placeholder: t('shared.search') %>
+        </div>
+        <div class="col-md-3">
+          <%= f.submit t('shared.search'), class: 'btn btn-outline-primary float-end' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<table class="table table-hover">
+  <thead class="table-dark">
+  <tr>
+    <th><%= sort_link(@q, :id) %></th>
+    <th><%= sort_link(@q, :number) %></th>
+    <th><%= sort_link(@q, :created_at) %></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render partial: 'scooter', collection: @scooters %>
+  </tbody>
+</table>
+
+<%= will_paginate @scooters, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
