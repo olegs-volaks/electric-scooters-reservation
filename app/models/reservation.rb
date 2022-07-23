@@ -5,6 +5,7 @@ class Reservation < ApplicationRecord
 
   validates :from, :to, presence: true, :overlap => { scope: :scooter_id }
   validates :to, comparison: { greater_than: :from }
+  validates :from, comparison: { greater_than: DateTime.now }
 
   private
 
