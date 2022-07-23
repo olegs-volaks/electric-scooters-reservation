@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
+  host: 127.0.0.1
   database: electric_scooters_reservation_development
+  username: postgres
+  password: ''
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
