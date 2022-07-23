@@ -4,5 +4,9 @@
   <td><%= employee.email %></td>
   <td><%= l(employee.created_at, format: :long) %></td>
   <td>
+    <div class="btn-group btn-group-sm float-end">
+      <%= link_to fas_icon('pen-to-square'), edit_employee_path(employee), class: 'btn btn-primary' %>
+      <%= link_to fas_icon('trash'), employee_path(employee), class: 'btn btn-danger', data: { turbo_method: :delete } %>
+    </div>
   </td>
 </tr>

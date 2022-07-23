@@ -41,6 +41,8 @@ en:
       title: "Employees"
     new:
       title: "New Employee"
+    edit:
+      title: "Edit Employee"
   shared:
     new: "New"
     search: "Search"
@@ -51,8 +53,12 @@ en:
       title: "Scooters"
     new:
       title: "New Scooter"
+    edit:
+      title: "Edit Scooter"
   reservations:
     index:
       title: "Reservations"
     new:
       title: "New Reservation"
+    edit:
+      title: "Edit Reservation"

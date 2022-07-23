@@ -1,5 +1,7 @@
 class ScootersController < ApplicationController
 
+  before_action :set_scooter, only: [:destroy, :edit, :update]
+
   def index
     @q = Scooter.ransack(params[:q])
     @q.sorts = 'id desc' if @q.sorts.empty?
@@ -19,9 +21,30 @@ class ScootersController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+    if @scooter.update(scooter_params)
+      redirect_to scooters_path, status: :see_other
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @scooter.destroy
+    redirect_to scooters_path, status: :see_other
+  end
+
   private
 
   def scooter_params
     params.require(:scooter).permit(:number)
+  end
+
+  def set_scooter
+    @scooter = Scooter.find(params[:id])
   end
 end

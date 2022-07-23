@@ -1,5 +1,7 @@
 class EmployeesController < ApplicationController
 
+  before_action :set_employee, only: [:destroy, :edit, :update]
+
   def index
     @q = Employee.ransack(params[:q])
     @q.sorts = 'id desc' if @q.sorts.empty?
@@ -19,9 +21,30 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+    if @employee.update(employee_params)
+      redirect_to employees_path, status: :see_other
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @employee.destroy
+    redirect_to employees_path, status: :see_other
+  end
+
   private
 
   def employee_params
     params.require(:employee).permit(:first_name, :last_name, :email)
+  end
+
+  def set_employee
+    @employee = Employee.find(params[:id])
   end
 end

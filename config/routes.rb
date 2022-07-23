@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "scooters#index"
 
-  resources :scooters
-  resources :employees
-  resources :reservations
+  resources :scooters, except: :show
+  resources :employees, except: :show
+  resources :reservations, except: :show
 end
