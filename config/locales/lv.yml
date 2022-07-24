@@ -29,42 +29,42 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+lv:
   layouts:
     application:
-      title: "E-Scooters"
-      scooters: "Scooters"
-      employees: "Employees"
-      reservations: "Reservations"
+      title: "E-velosipēdi"
+      scooters: "Elektriskie velosipēdi"
+      employees: "Darbinieki"
+      reservations: "Rezervācijas"
   employees:
     index:
-      title: "Employees"
+      title: "Darbinieki"
     new:
-      title: "New Employee"
+      title: "Jauns darbinieks"
     edit:
-      title: "Edit Employee"
+      title: "Rediģēt darbinieku"
   shared:
-    new: "New"
-    search: "Search"
-    back: "Back"
-    submit: "Submit"
+    new: "Jauns"
+    search: "Meklēt"
+    back: "Atpakaļ"
+    submit: "Iesniegt"
   scooters:
     index:
-      title: "Scooters"
+      title: "Elektriskie velosipēdi"
     new:
-      title: "New Scooter"
+      title: "Jauns elektriskais velosipēds"
     edit:
-      title: "Edit Scooter"
+      title: "Rediģēt elektrisko velosipēdu"
   reservations:
     index:
-      title: "Reservations"
+      title: "Rezervācijas"
     new:
-      title: "New Reservation"
+      title: "Jauna rezervācija"
     edit:
-      title: "Edit Reservation"
+      title: "Rediģēt rezervāciju"
   unsubscribes:
     show:
-      unsubscribed: "You have successfully unsubscribed from email notifications"
+      unsubscribed: "Jūs esat veiksmīgi atteicies no e-pasta paziņojumu abonēšanas"
 
   activerecord:
     errors:
@@ -72,20 +72,20 @@ en:
         reservation:
           attributes:
             from:
-              overlap: "overlaps with another record"
+              overlap: "pārklājas ar citu ierakstu"
     attributes:
       scooter:
-        number: "Number"
-        created_at: "Created at"
+        number: "Numurs"
+        created_at: "Izveidots"
       employee:
-        first_name: "First name"
-        last_name: "Last name"
-        email: "Email"
-        created_at: "Created at"
-        full_name: "Name"
+        first_name: "Vārds"
+        last_name: "Uzvārds"
+        email: "E-pasts"
+        created_at: "Izveidots"
+        full_name: "Vārds"
       reservation:
-        employee: "Employee"
-        scooter: "Scooter"
-        from: "From"
-        to: "To"
-        created_at: "Created at"
+        employee: "Darbinieks"
+        scooter: "Elektriskais velosipēds"
+        from: "No"
+        to: "Līdz"
+        created_at: "Izveidots"

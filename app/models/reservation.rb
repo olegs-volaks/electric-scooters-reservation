@@ -7,6 +7,8 @@ class Reservation < ApplicationRecord
   validates :to, comparison: { greater_than: :from }
   validates :from, comparison: { greater_than: DateTime.now }
 
+  after_create :send_email
+
   private
 
   def period_validate
@@ -16,4 +18,13 @@ class Reservation < ApplicationRecord
       self.errors.add(:to, :reserved)
     end
   end
+
+  def send_email
+    if self.employee.subscribe? && (self.from - 1.days) > DateTime.now
+      verifier = ActiveSupport::MessageVerifier.new(Employee.secure_key)
+      unsubscribe_token = verifier.generate(self.employee_id)
+      NotificationMailer.notification(self.id, unsubscribe_token).deliver_later(wait_until: self.from - 1.days)
+    end
+  end
+
 end

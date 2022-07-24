@@ -1,0 +1,6 @@
+en:
+  notification_mailer:
+    notification:
+      subject: "Notification"
+      unsubscribe: "Unsubscribe"
+      body: "We remind you that tomorrow you have an electric bike reserved from %{from} to %{to}"

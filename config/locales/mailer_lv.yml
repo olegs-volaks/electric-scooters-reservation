@@ -1,0 +1,6 @@
+lv:
+  notification_mailer:
+    notification:
+      subject: "Paziņojums"
+      unsubscribe: "Atteikties"
+      body: "Atgādinām, ka rīt jums ir rezervēts elektrovelosipēds no %{from} līdz %{to}"

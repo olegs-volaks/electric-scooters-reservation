@@ -15,4 +15,8 @@ class Employee < ApplicationRecord
                                    [Arel::Nodes::NamedFunction.new('concat_ws',
                                                                    [Arel::Nodes::SqlLiteral.new("' '"), parent.table[:first_name], parent.table[:last_name]])])
   end
+
+  def self.secure_key
+    "KIaTZuQ7Sq+emmxl0yKYbb+fsYU2UF0iqKVa6bS4"
+  end
 end

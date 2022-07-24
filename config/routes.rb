@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :scooters, except: :show
   resources :employees, except: :show
   resources :reservations, except: :show
+  resource :unsubscribe, only: :show
 end

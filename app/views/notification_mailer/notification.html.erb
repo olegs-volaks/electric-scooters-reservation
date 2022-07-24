@@ -1,0 +1,13 @@
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+<p>
+  <%= t('.body', from: l(@reservation.from, format: :long), to: l(@reservation.to, format: :long)) %>
+</p>
+<p>
+  <%= link_to t('.unsubscribe'), unsubscribe_url(id: @unsubscribe_token) %>.
+</p>
+</body>
+</html>
