@@ -91,6 +91,10 @@ lv:
           attributes:
             from:
               overlap: "pārklājas ar citu ierakstu"
+            employee:
+              required: "ir jābūt aizpildītam"
+            scooter:
+              required: "ir jābūt aizpildītam"
     attributes:
       scooter:
         number: "Numurs"
