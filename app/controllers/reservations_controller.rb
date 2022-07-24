@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
-      redirect_to reservations_path, status: :see_other
+      redirect_to reservations_path, status: :see_other, success: t('.success')
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class ReservationsController < ApplicationController
 
   def update
     if @reservation.update(reservation_params)
-      redirect_to reservations_path, status: :see_other
+      redirect_to reservations_path, status: :see_other, success: t('.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -35,7 +35,7 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation.destroy
-    redirect_to reservations_path, status: :see_other
+    redirect_to reservations_path, status: :see_other, success: t('.success')
   end
 
   private

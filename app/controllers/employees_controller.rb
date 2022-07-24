@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
     if @employee.save
-      redirect_to employees_path, status: :see_other
+      redirect_to employees_path, status: :see_other, success: t('.success')
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class EmployeesController < ApplicationController
 
   def update
     if @employee.update(employee_params)
-      redirect_to employees_path, status: :see_other
+      redirect_to employees_path, status: :see_other, success: t('.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -35,7 +35,7 @@ class EmployeesController < ApplicationController
 
   def destroy
     @employee.destroy
-    redirect_to employees_path, status: :see_other
+    redirect_to employees_path, status: :see_other, success: t('.success')
   end
 
   private

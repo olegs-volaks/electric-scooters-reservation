@@ -15,7 +15,7 @@ class ScootersController < ApplicationController
   def create
     @scooter = Scooter.new(scooter_params)
     if @scooter.save
-      redirect_to scooters_path, status: :see_other
+      redirect_to scooters_path, status: :see_other, success: t('.success')
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class ScootersController < ApplicationController
 
   def update
     if @scooter.update(scooter_params)
-      redirect_to scooters_path, status: :see_other
+      redirect_to scooters_path, status: :see_other, success: t('.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -35,7 +35,7 @@ class ScootersController < ApplicationController
 
   def destroy
     @scooter.destroy
-    redirect_to scooters_path, status: :see_other
+    redirect_to scooters_path, status: :see_other, success: t('.success')
   end
 
   private

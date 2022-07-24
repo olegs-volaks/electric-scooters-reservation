@@ -43,6 +43,12 @@ lv:
       title: "Jauns darbinieks"
     edit:
       title: "Rediģēt darbinieku"
+    create:
+      success: "Darbinieks veiksmīgi izveidots!"
+    update:
+      success: "Darbinieks veiksmīgi atjaunināts!"
+    destroy:
+      success: "Darbinieks veiksmīgi noņemts!"
   shared:
     new: "Jauns"
     search: "Meklēt"
@@ -55,6 +61,12 @@ lv:
       title: "Jauns elektriskais velosipēds"
     edit:
       title: "Rediģēt elektrisko velosipēdu"
+    create:
+      success: "Elektriskais velosipēds veiksmīgi izveidots!"
+    destroy:
+      success: "Elektriskais velosipēds veiksmīgi noņemts!"
+    update:
+      success: "Elektriskais velosipēds veiksmīgi atjaunināts!"
   reservations:
     index:
       title: "Rezervācijas"
@@ -62,6 +74,12 @@ lv:
       title: "Jauna rezervācija"
     edit:
       title: "Rediģēt rezervāciju"
+    create:
+      success: "Rezervācija veiksmīgi izveidota!"
+    update:
+      success: "Rezervācija ir veiksmīgi atjaunināta!"
+    destroy:
+      success: "Rezervācija veiksmīgi noņemta!"
   unsubscribes:
     show:
       unsubscribed: "Jūs esat veiksmīgi atteicies no e-pasta paziņojumu abonēšanas"

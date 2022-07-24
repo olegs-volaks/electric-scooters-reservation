@@ -26,6 +26,13 @@
     </div>
   </div>
 </nav>
+
+<div class="toast-container position-fixed top-0 end-0 p-3" id="toastContainer">
+  <% flash.each do |type, msg| %>
+    <%= render(FlashToastComponent.new(text: msg, type: type)) %>
+  <% end %>
+</div>
+
 <div class="container-xxl mt-3">
   <%= yield %>
 </div>

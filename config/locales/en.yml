@@ -43,6 +43,12 @@ en:
       title: "New Employee"
     edit:
       title: "Edit Employee"
+    create:
+      success: "Employee successfully created!"
+    update:
+      success: "Employee successfully updated!"
+    destroy:
+      success: "Employee successfully removed!"
   shared:
     new: "New"
     search: "Search"
@@ -55,6 +61,12 @@ en:
       title: "New Scooter"
     edit:
       title: "Edit Scooter"
+    create:
+      success: "Scooter successfully created!"
+    update:
+      success: "Scooter successfully updated!"
+    destroy:
+      success: "Scooter successfully removed!"
   reservations:
     index:
       title: "Reservations"
@@ -62,6 +74,12 @@ en:
       title: "New Reservation"
     edit:
       title: "Edit Reservation"
+    create:
+      success: "Reservation successfully created!"
+    update:
+      success: "Reservation successfully updated!"
+    destroy:
+      success: "Reservation successfully removed!"
   unsubscribes:
     show:
       unsubscribed: "You have successfully unsubscribed from email notifications"

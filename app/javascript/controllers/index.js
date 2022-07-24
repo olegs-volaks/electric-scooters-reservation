@@ -8,6 +8,10 @@ import FlatpickrController from "./flatpickr_controller"
 
 application.register("flatpickr", FlatpickrController)
 
+import ToastController from "./toast_controller"
+
+application.register("toast", ToastController)
+
 import TomSelectController from "./tom_select_controller"
 
 application.register("tom-select", TomSelectController)
