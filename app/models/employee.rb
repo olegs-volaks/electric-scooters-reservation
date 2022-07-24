@@ -1,6 +1,8 @@
 class Employee < ApplicationRecord
 
-  has_many :reservations
+  acts_as_paranoid
+
+  has_many :reservations, dependent: :destroy
   has_many :scooters, through: :reservations
 
   validates :last_name, :first_name, presence: true

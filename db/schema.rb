@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_24_130204) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_24_215058) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_24_130204) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "subscribe", default: true, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_employees_on_deleted_at"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -30,14 +32,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_24_130204) do
     t.datetime "to", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_reservations_on_deleted_at"
     t.index ["employee_id"], name: "index_reservations_on_employee_id"
+    t.index ["from"], name: "index_reservations_on_from"
     t.index ["scooter_id"], name: "index_reservations_on_scooter_id"
+    t.index ["to"], name: "index_reservations_on_to"
   end
 
   create_table "scooters", force: :cascade do |t|
     t.string "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_scooters_on_deleted_at"
   end
 
   add_foreign_key "reservations", "employees"

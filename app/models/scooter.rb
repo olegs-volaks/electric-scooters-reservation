@@ -1,5 +1,8 @@
 class Scooter < ApplicationRecord
-  has_many :reservations
+
+  acts_as_paranoid
+
+  has_many :reservations, dependent: :destroy
   has_many :employees, through: :reservations
 
   validates :number, presence: true, uniqueness: true
