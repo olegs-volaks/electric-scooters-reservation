@@ -4,7 +4,7 @@ class Employee < ApplicationRecord
   has_many :scooters, through: :reservations
 
   validates :last_name, :first_name, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   def name
     "#{self.first_name} #{self.last_name}"
